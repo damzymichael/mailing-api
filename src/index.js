@@ -9,7 +9,8 @@ const fastify = Fastify({
   logger: true,
 })
 
-fastify.register(cors, { origin: ["http://127.0.0.1:5500"], credentials: true })
+//["http://127.0.0.1:5500"]
+fastify.register(cors, { origin: true })
 
 fastify.get("/", function (request, reply) {
   reply.send("My mailing api")
@@ -53,7 +54,7 @@ fastify.register(
   { prefix: "/api" },
 )
 
-fastify.listen({ port: 3000 }, function (err, address) {
+fastify.listen({ port: 3000, host: "0.0.0.0" }, function (err, address) {
   if (err) {
     fastify.log.error("Uncaught exception", err)
     // Todo Restart server with pm2 when unknown error is thrown
