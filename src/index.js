@@ -10,9 +10,7 @@ const fastify = Fastify({
 })
 
 fastify.register(cors, {
-  origin: "*",
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  origin: ["https://brand.mosefits.com/"],
 })
 
 fastify.get("/", function (request, reply) {
