@@ -10,7 +10,7 @@ const fastify = Fastify({
 })
 
 fastify.register(cors, {
-  origin: ["https://brand.mosefits.com/"],
+  origin: ["https://brand.mosefits.com"],
 })
 
 fastify.get("/", function (request, reply) {
