@@ -9,8 +9,11 @@ const fastify = Fastify({
   logger: true,
 })
 
-//["http://127.0.0.1:5500"]
-fastify.register(cors, { origin: true })
+fastify.register(cors, {
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+})
 
 fastify.get("/", function (request, reply) {
   reply.send("My mailing api")
