@@ -25,7 +25,7 @@ fastify.register(
 
       const emailData = {
         from: "mose-fits@resend.dev",
-        to: "michaelolsen184@gmail.com",
+        to: "mybrorealstore@gmail.com",
         subject: "New Order from mose fits",
         html: "<strong>New crocs order!</strong>",
       }
