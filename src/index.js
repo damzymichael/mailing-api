@@ -10,7 +10,7 @@ const fastify = Fastify({
 })
 
 fastify.register(cors, {
-    origin: ["https://borealit.orionhaven.com/", "http://localhost:5500", "http://127.0.0.1:5500"],
+    origin: ["https://borealit.orionhaven.com", "http://localhost:5500", "http://127.0.0.1:5500"],
 })
 
 fastify.get("/", function (request, reply) {
